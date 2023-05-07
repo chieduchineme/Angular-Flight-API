@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+:root {
+    --background: white;
+    --background-primary: rgba(221, 221, 221, 0.5);
+    --text-primary: #2b2b2b;
+    /* --accent: purple; */
+  }
+  [data-theme="dark"] {
+    --background: rgb(22, 22, 22);
+    --background-primary: rgba(106, 106, 106, 0.5);
+    --text-primary: rgb(235, 235, 235);
+    --accent: darkred;
+  }
+  .row {
+    --bs-gutter-x: 0;
+  }
+  
+  [data-theme="dark"] .toggle-theme:hover::after {
+    content: "Day";
+  }
+  *{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+  }
+  // .container{
+  //   display:flex;
+  // }
+//   main{
+//     padding: 20px;
+//   }
+
+main {
+  margin-top: -180vh;
+  margin-left:0%
+}
+  .sidebar{
+    background: #000;
+    color: #fff;
+    height: 180vh;
+    transition: all 0.5s;
+    padding-left: -9em;
+  }
+  .top_section{
+    display: flex;
+    align-items:center;
+    // padding:20px 15px;
+  }
+  .logo{
+    font-size: 30px;
+  }
+  .bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+  }
+  .link{
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+  }
+  .link:hover{
+    background: blue;
+    color: #000;
+    transition: all 0.5s;
+  }
+  .active{
+    background: blue;
+    color: #000;
+  }
+  .icon, .link_text{
+    font-size: 20px;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  
+  .App-header {
+    background-color: rgb(233, 233, 218);
+    /* background-color: rgb(221, 25, 25); */
+    /* min-height: 100vh; */
+    overflow: hidden;
+    // width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    
+  }
+  
+  .App-link {
+    color: blue;
+  }

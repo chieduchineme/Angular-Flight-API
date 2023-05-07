@@ -1,0 +1,9 @@
+<ng-container *ngIf="!loading && ourAirport !=='' && normalBeginDate !== '' && normalEndDate !== ''">  
+    <div style="color: blue">
+      <p>Airport:     {{ourAirport}}</p>
+      <p>Start Date:     {{normalBeginDate}}</p>
+      <p>End Date:     {{normalEndDate}}</p>
+      <p>Number of Arrivals:     {{arrivalCount}}</p>
+      <p>Number of Departure:     {{departureCount}}</p>
+    </div>
+</ng-container>

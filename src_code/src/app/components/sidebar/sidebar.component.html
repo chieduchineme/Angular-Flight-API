@@ -1,0 +1,16 @@
+  <div [style.width]="isOpen ? '200px' : '50px'" class="sidebar" style="margin-left: -1em;">
+      <div class="top_section">
+        <img *ngIf="isOpen" src="../../../assets/images/openskylogo.png" style="display: block; width: 10em; margin-left: -1em; height: 38px;" alt="openSkyIcon" />
+        <div [style.marginLeft]="isOpen ? '5px' : '0px'" class="bars" (click)="toggle()">
+          <img src="../../../assets/images/sidebarImage.png" style="height: 19px;" alt="sideBarImage" />
+        </div>
+      </div>
+      <ng-container *ngFor="let item of menuItem; let i = index;">
+        <a [routerLink]="item.path" routerLinkActive="active" class="link">
+          <div class="icon">
+            <img [src]="item.icon" style="height: 19px;" [alt]="item.name + 'Icon'" />
+          </div>
+          <div [style.display]="isOpen ? 'block' : 'none'" class="link_text">{{item.name}}</div>
+        </a>
+      </ng-container>
+  </div>

@@ -1,0 +1,140 @@
+/* body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box} */
+ 
+ 
+.content{
+    max-width: 500px;
+  //  margin: auto;
+    /* margin-top: 30%;  */
+     background-color: whitesmoke; 
+    /*text-align: center; 
+    position: relative; */
+  //  padding: 16px; 
+   /* box-sizing: border-box; */
+   margin-top: 5%;
+   margin-bottom: 2%;
+
+} 
+
+
+button {
+   background-color: #04AA6D;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   opacity: 0.9;
+ }
+ 
+ button:hover {
+   opacity:1;
+ }
+
+ .clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+  }
+
+  @media screen and (max-width: 300px) {
+   .cancelbtn, .signupbtn {
+      width: 100%;
+   }
+ }
+
+ .cancelbtn {
+   padding: 14px 20px;
+   background-color: #f44336;
+ }
+ 
+ /* Float cancel and signup buttons and add an equal width */
+ .cancelbtn, .signupbtn {
+   float: left;
+   width: 50%;
+ }
+
+ .container2{
+   box-sizing: border-box;
+   min-height: 25%;
+   /* margin: auto; */
+   background-color: wheat; 
+ }
+
+ input[type=text], input[type=password], input[type=email] {
+   width: 100%;
+   padding: 8px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: none;
+   background:  #f1f1f1;
+ }
+ 
+ input[type=text]:focus, input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+   border: 1px solid;
+ }
+ 
+ hr {
+   border: 1px solid #f1f1f1;
+   margin-bottom: 25px;
+ }
+ .psw {
+    margin-right: 4em;
+    margin-top: 8.11vw;
+    color: blue;
+ }
+ .small {
+    padding-bottom: 2em ;
+    font-size: small;
+ }
+   /* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+    height: 100vh;
+    width: 51vw; 
+    box-shadow: 0px 15px 90px 0px rgba(0, 0, 0, 0.03);
+    margin-top: -0.55vh;
+  }
+  .parent{
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+  }
+.backgroundImage{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 55.67vw;
+    margin-left: -6.73vw; 
+    margin-right: 1em;
+    /* margin-top: 11.77vh; */
+    background-image: url(../../../assets/images/airplan4.jpg);
+}  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  @media screen and (max-width: 750px) {
+    .parent{
+        display: grid;
+        background-repeat: no-repeat;
+    }
+    .backgroundImage{
+        display: none;
+    }
+    .formparent{
+        padding: 6em 4em;
+        width: 100vw;
+        background: none;
+
+    }
+  }

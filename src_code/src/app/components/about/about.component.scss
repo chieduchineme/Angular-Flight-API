@@ -1,0 +1,17 @@
+.HomePage {
+    background-color: var(--background);
+    color: var(--text-primary);
+  }
+  
+  .HomePage .top-cards .card {
+    height: 200px;
+    padding: 10px;
+  }
+  .HomePage .top-cards .card b {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+  .HomePage .card {
+    background-color: var(--background-primary);
+  }
+  

@@ -1,0 +1,52 @@
+  <div class="Dashboard">
+    <h4>Compare The Rates of Arrival and Departure of Flights in any Airport</h4>
+    <div class="container" style="display: flex; flex-direction: column">
+      <div class="row">
+        <div class="mx-md-8 mt-2 inputs">
+          <p>Please note that the end date is designed to be not more than seven days ahead of the start date.</p>
+          <p>Initial date is set to current date.</p>
+          <p>This is Open Sky's Policy.</p>
+          <div class="rowOrColumn">
+            <div class="column mxr-4">
+              <div class="uk-alert-danger" uk-alert *ngIf ="displayError">
+                <a class="uk-alert-close" uk-close (click) ="closeAlert()"></a>
+                <p style="font-family: 'Open Sans-serif'">{{ displayedErrorMessage }}</p>
+              </div>
+              <form [formGroup]="flightsFilter">
+                <mat-label>Start Date</mat-label><br>
+                <mat-form-field class="p-details w-80" appearance="outline">
+                  <input matInput placeholder="Enter Start Date" type="datetime-local" formControlName="startDate" 
+                    (ngModelChange)="startDateChanged($event)" [min]="getMinBeginDate(endDate)" [max]="endDate" required>
+                </mat-form-field><br>
+
+                <mat-label>End Date</mat-label><br>
+                <mat-form-field class="p-details w-80" appearance="outline">
+                  <input matInput placeholder="Enter End Date" type="datetime-local" formControlName="endDate" 
+                    (ngModelChange)="endDateChanged($event)" [max]="ourNewDate" required>
+                </mat-form-field><br>
+
+                <div className="rowOrColumn" >
+                  <div className="column mxr-4">
+                    <mat-label>Airport</mat-label><br>
+                    <mat-form-field class="w100 p-details" appearance="outline">
+                      <mat-select placeholder="Select an Airport"  formControlName="airport" (selectionChange)="handleSelectChange($event)" >
+                        <mat-option *ngFor="let ourAirport of ourAirports" [value]="ourAirport" >
+                          {{ourAirport}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+                    <filtered-result [ourAirport]="ourAirport" [normalBeginDate]="normalBeginDate"
+                    [normalEndDate]="normalEndDate" [arrivalCount]="arrivalCount" [departureCount]="departureCount"
+                    [loading]="loading"></filtered-result>
+                  </div>  
+                <ng-container *ngIf="(ourArrivalCount !== 0 || ourDepartureCount !== 0) && ourArrivalCount != null || ourDepartureCount != null">
+                  <flight-chart [ourArrivalCount]="ourArrivalCount" [ourDepartureCount]="ourDepartureCount"></flight-chart>
+                </ng-container>
+              </div>
+            </form> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

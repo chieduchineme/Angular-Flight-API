@@ -1,0 +1,18 @@
+  // .container-fluid {
+  //   margin-right: auto;
+  //   margin-left: auto;
+  // }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1em;
+  }
+
+  .scrollable-container {
+    width: 100%;
+    // overflow-x: scroll;
+  }
+
+  
+  

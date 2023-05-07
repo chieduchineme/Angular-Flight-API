@@ -1,0 +1,30 @@
+<div class="container">
+  <div className="parent" style="display: flex; flex-direction: row;">
+    <div>
+        <img src="../../../assets/images/airplan4.jpg" alt="airplan4" class="backgroundImage">
+    </div>
+    <div class="content" class="animate">
+        <h2 class="psw">Welcome to Edu Bookings</h2>
+        <p class="small">Kindly input your credentials to Login</p>
+        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+          <div class="form-group" >
+            <label for="email">Email:</label>
+            <input type="email" formControlName="email" placeholder="Enter Email Address" class="form-control" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" formControlName="password" placeholder="Enter Password" class="form-control" id="password" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+        </form>
+        <label>
+            <mat-checkbox name="remember" [(ngModel)]="remember">
+            <span class="psw">Remember me</span>
+            </mat-checkbox>
+        </label>
+        <span class="psw">Forgot password?</span>
+    </div>
+  </div> 
+</div>
+<app-footer></app-footer>
