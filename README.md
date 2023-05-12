@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+# Email: Any valid email; Password: Length must be more than 3 characters
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
