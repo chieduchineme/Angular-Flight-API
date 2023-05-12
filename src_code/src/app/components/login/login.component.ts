@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/dashboard']);
   } else {
     this.hasError = !this.hasError;
-    this.errorMessage = "Email is not valid and Password is required"
+    this.errorMessage = "Email must be valid and Password is required"
   }
 }
 
